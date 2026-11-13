@@ -1,0 +1,379 @@
+{
+ "exposure_usd_mn": {
+  "fuel_usd": 3947.792968626434,
+  "lease_maint_usd": 2000.0,
+  "other_usd": 600.0,
+  "gross_usd": 6547.792968626434,
+  "fx_revenue_usd": 1516.7369972732392,
+  "net_usd": 5031.055971353195,
+  "natural_hedge": 0.2316409520796766,
+  "net_inr_at_spot": 47713.428
+ },
+ "forward_12m": 97.22529311191336,
+ "forward_premium_12m": 0.025174488567990316,
+ "ferr_charge_12m": 0.6309921522963173,
+ "atm_call_12m": 2.1850763174063657,
+ "collar_12m": [
+  95.39562222089474,
+  99.16979897415163
+ ],
+ "budget_inr_cr": 48361.58557434806,
+ "risk_base": {
+  "Unhedged": {
+   "Expected cost": 48358.7,
+   "vs budget": -2.9,
+   "Std dev": 1788.2,
+   "P5": 45456.7,
+   "P50": 48326.4,
+   "P95": 51390.0,
+   "P99": 52677.0,
+   "Cost-at-risk (P95 - mean)": 3031.4,
+   "Worst": 55342.0,
+   "Variance reduction": 0.0
+  },
+  "Forward 100%": {
+   "Expected cost": 48530.6,
+   "vs budget": 169.0,
+   "Std dev": 0.0,
+   "P5": 48530.6,
+   "P50": 48530.6,
+   "P95": 48530.6,
+   "P99": 48530.6,
+   "Cost-at-risk (P95 - mean)": 0.0,
+   "Worst": 48530.6,
+   "Variance reduction": 1.0
+  },
+  "Forward 50%": {
+   "Expected cost": 48444.6,
+   "vs budget": 83.0,
+   "Std dev": 894.1,
+   "P5": 46993.6,
+   "P50": 48428.5,
+   "P95": 49960.3,
+   "P99": 50603.8,
+   "Cost-at-risk (P95 - mean)": 1515.7,
+   "Worst": 51936.3,
+   "Variance reduction": 0.8
+  },
+  "USD call (ATM forward)": {
+   "Expected cost": 48529.3,
+   "vs budget": 167.7,
+   "Std dev": 989.4,
+   "P5": 46415.7,
+   "P50": 48944.9,
+   "P95": 49346.8,
+   "P99": 49346.8,
+   "Cost-at-risk (P95 - mean)": 817.5,
+   "Worst": 49346.8,
+   "Variance reduction": 0.7
+  },
+  "Zero-cost collar": {
+   "Expected cost": 48533.2,
+   "vs budget": 171.6,
+   "Std dev": 646.1,
+   "P5": 47624.8,
+   "P50": 48509.4,
+   "P95": 49478.8,
+   "P99": 49497.8,
+   "Cost-at-risk (P95 - mean)": 945.6,
+   "Worst": 49497.8,
+   "Variance reduction": 0.9
+  },
+  "Seagull": {
+   "Expected cost": 48530.1,
+   "vs budget": 168.5,
+   "Std dev": 498.6,
+   "P5": 48195.2,
+   "P50": 48402.8,
+   "P95": 49555.7,
+   "P99": 50694.4,
+   "Cost-at-risk (P95 - mean)": 1025.6,
+   "Worst": 53096.7,
+   "Variance reduction": 0.9
+  },
+  "Layered policy": {
+   "Expected cost": 48433.2,
+   "vs budget": 71.6,
+   "Std dev": 1067.6,
+   "P5": 46713.2,
+   "P50": 48410.8,
+   "P95": 50221.7,
+   "P99": 50948.3,
+   "Cost-at-risk (P95 - mean)": 1788.5,
+   "Worst": 52298.2,
+   "Variance reduction": 0.6
+  }
+ },
+ "risk_stress": {
+  "Unhedged": {
+   "Expected cost": 49835.2,
+   "vs budget": 1473.6,
+   "Std dev": 2782.3,
+   "P5": 45374.3,
+   "P50": 49757.5,
+   "P95": 54615.1,
+   "P99": 56672.6,
+   "Cost-at-risk (P95 - mean)": 4779.9,
+   "Worst": 61038.0,
+   "Variance reduction": 0.0
+  },
+  "Forward 100%": {
+   "Expected cost": 48530.6,
+   "vs budget": 169.0,
+   "Std dev": 0.0,
+   "P5": 48530.6,
+   "P50": 48530.6,
+   "P95": 48530.6,
+   "P99": 48530.6,
+   "Cost-at-risk (P95 - mean)": 0.0,
+   "Worst": 48530.6,
+   "Variance reduction": 1.0
+  },
+  "Forward 50%": {
+   "Expected cost": 49182.9,
+   "vs budget": 821.3,
+   "Std dev": 1391.1,
+   "P5": 46952.4,
+   "P50": 49144.0,
+   "P95": 51572.9,
+   "P99": 52601.6,
+   "Cost-at-risk (P95 - mean)": 2390.0,
+   "Worst": 54784.3,
+   "Variance reduction": 0.8
+  },
+  "USD call (ATM forward)": {
+   "Expected cost": 48691.0,
+   "vs budget": 329.5,
+   "Std dev": 1049.0,
+   "P5": 46318.3,
+   "P50": 49192.9,
+   "P95": 49346.8,
+   "P99": 49346.8,
+   "Cost-at-risk (P95 - mean)": 655.8,
+   "Worst": 49346.8,
+   "Variance reduction": 0.9
+  },
+  "Zero-cost collar": {
+   "Expected cost": 48837.3,
+   "vs budget": 475.7,
+   "Std dev": 627.3,
+   "P5": 47655.9,
+   "P50": 49047.0,
+   "P95": 49497.8,
+   "P99": 49497.8,
+   "Cost-at-risk (P95 - mean)": 660.5,
+   "Worst": 49497.8,
+   "Variance reduction": 0.9
+  },
+  "Seagull": {
+   "Expected cost": 49376.4,
+   "vs budget": 1014.8,
+   "Std dev": 1468.0,
+   "P5": 48195.2,
+   "P50": 48744.2,
+   "P95": 52554.6,
+   "P99": 54532.4,
+   "Cost-at-risk (P95 - mean)": 3178.3,
+   "Worst": 58789.0,
+   "Variance reduction": 0.7
+  },
+  "Layered policy": {
+   "Expected cost": 49312.8,
+   "vs budget": 951.2,
+   "Std dev": 1607.1,
+   "P5": 46701.4,
+   "P50": 49306.6,
+   "P95": 52003.0,
+   "P99": 53194.1,
+   "Cost-at-risk (P95 - mean)": 2690.2,
+   "Worst": 55475.3,
+   "Variance reduction": 0.7
+  }
+ },
+ "risk_relief": {
+  "Unhedged": {
+   "Expected cost": 46691.1,
+   "vs budget": -1670.4,
+   "Std dev": 1714.1,
+   "P5": 43904.2,
+   "P50": 46659.3,
+   "P95": 49601.1,
+   "P99": 50825.9,
+   "Cost-at-risk (P95 - mean)": 2910.0,
+   "Worst": 53402.4,
+   "Variance reduction": 0.0
+  },
+  "Forward 100%": {
+   "Expected cost": 48530.6,
+   "vs budget": 169.0,
+   "Std dev": 0.0,
+   "P5": 48530.6,
+   "P50": 48530.6,
+   "P95": 48530.6,
+   "P99": 48530.6,
+   "Cost-at-risk (P95 - mean)": 0.0,
+   "Worst": 48530.6,
+   "Variance reduction": 1.0
+  },
+  "Forward 50%": {
+   "Expected cost": 47610.9,
+   "vs budget": -750.7,
+   "Std dev": 857.1,
+   "P5": 46217.4,
+   "P50": 47595.0,
+   "P95": 49065.9,
+   "P99": 49678.3,
+   "Cost-at-risk (P95 - mean)": 1455.0,
+   "Worst": 50966.5,
+   "Variance reduction": 0.8
+  },
+  "USD call (ATM forward)": {
+   "Expected cost": 47437.1,
+   "vs budget": -924.5,
+   "Std dev": 1394.1,
+   "P5": 44887.8,
+   "P50": 47593.7,
+   "P95": 49319.5,
+   "P99": 49346.8,
+   "Cost-at-risk (P95 - mean)": 1882.4,
+   "Worst": 49346.8,
+   "Variance reduction": 0.3
+  },
+  "Zero-cost collar": {
+   "Expected cost": 48040.4,
+   "vs budget": -321.2,
+   "Std dev": 504.3,
+   "P5": 47607.9,
+   "P50": 47824.1,
+   "P95": 49207.3,
+   "P99": 49461.7,
+   "Cost-at-risk (P95 - mean)": 1166.9,
+   "Worst": 49497.8,
+   "Variance reduction": 0.9
+  },
+  "Seagull": {
+   "Expected cost": 48281.5,
+   "vs budget": -80.1,
+   "Std dev": 195.0,
+   "P5": 48195.2,
+   "P50": 48197.1,
+   "P95": 48557.8,
+   "P99": 49123.4,
+   "Cost-at-risk (P95 - mean)": 276.3,
+   "Worst": 51179.7,
+   "Variance reduction": 1.0
+  },
+  "Layered policy": {
+   "Expected cost": 47418.7,
+   "vs budget": -942.9,
+   "Std dev": 999.4,
+   "P5": 45842.0,
+   "P50": 47366.7,
+   "P95": 49177.9,
+   "P99": 49889.7,
+   "Cost-at-risk (P95 - mean)": 1759.2,
+   "Worst": 51174.6,
+   "Variance reduction": 0.7
+  }
+ },
+ "scenario_grid": {
+  "90.0": {
+   "Unhedged": 45279.5,
+   "Forward 100%": 48530.6,
+   "Forward 50%": 46905.1,
+   "USD call (ATM forward)": 46264.7,
+   "Zero-cost collar": 47607.9,
+   "Seagull": 48195.2,
+   "Layered policy": 46753.6
+  },
+  "92.5": {
+   "Unhedged": 46537.3,
+   "Forward 100%": 48530.6,
+   "Forward 50%": 47533.9,
+   "USD call (ATM forward)": 47522.5,
+   "Zero-cost collar": 47607.9,
+   "Seagull": 48195.2,
+   "Layered policy": 47351.0
+  },
+  "95.0": {
+   "Unhedged": 47795.0,
+   "Forward 100%": 48530.6,
+   "Forward 50%": 48162.8,
+   "USD call (ATM forward)": 48780.3,
+   "Zero-cost collar": 47988.8,
+   "Seagull": 48195.2,
+   "Layered policy": 48032.1
+  },
+  "97.5": {
+   "Unhedged": 49052.8,
+   "Forward 100%": 48530.6,
+   "Forward 50%": 48791.7,
+   "USD call (ATM forward)": 49346.8,
+   "Zero-cost collar": 49176.1,
+   "Seagull": 48530.6,
+   "Layered policy": 48835.5
+  },
+  "100.0": {
+   "Unhedged": 50310.6,
+   "Forward 100%": 48530.6,
+   "Forward 50%": 49420.6,
+   "USD call (ATM forward)": 49346.8,
+   "Zero-cost collar": 49497.8,
+   "Seagull": 48539.9,
+   "Layered policy": 49473.5
+  },
+  "105.0": {
+   "Unhedged": 52826.1,
+   "Forward 100%": 48530.6,
+   "Forward 50%": 50678.3,
+   "USD call (ATM forward)": 49346.8,
+   "Zero-cost collar": 49497.8,
+   "Seagull": 50577.0,
+   "Layered policy": 50668.4
+  }
+ },
+ "backtest": {
+  "start_rate": 90.0925,
+  "totals": {
+   "Unhedged": 39533.4005558037,
+   "Forward 100%": 38227.9702094551,
+   "Forward 50%": 38880.68538262941,
+   "USD call (ATM forward)": 38673.900551726154,
+   "Zero-cost collar": 38933.26100685287,
+   "Seagull": 38227.9702094551,
+   "Layered policy": 38991.89074658336
+  },
+  "avg_rate": {
+   "Unhedged": 94.29448,
+   "Forward 100%": 91.18078692137387,
+   "Forward 50%": 92.73763346068694,
+   "USD call (ATM forward)": 92.24441335242969,
+   "Zero-cost collar": 92.86303605892356,
+   "Seagull": 91.18078692137387,
+   "Layered policy": 93.00287884357392
+  },
+  "saving_vs_unhedged": {
+   "Unhedged": 0.0,
+   "Forward 100%": 1305.4303463485994,
+   "Forward 50%": 652.7151731742924,
+   "USD call (ATM forward)": 859.5000040775485,
+   "Zero-cost collar": 600.1395489508359,
+   "Seagull": 1305.4303463485994,
+   "Layered policy": 541.5098092203407
+  }
+ },
+ "translation": {
+  "per_rupee": 1000.0,
+  "per_rupee_net_of_hedges": 870.0,
+  "q2fy26_check": {
+   "move": 3.18,
+   "reported_loss": 2900,
+   "implied_usd_bn": 9.119496855345911
+  }
+ },
+ "realised_vol": {
+  "ytd": 0.05508971747548522,
+  "60d": 0.04004773746086454,
+  "20d": 0.05283659580309277
+ }
+}

@@ -1,0 +1,54 @@
+# IndiGo (InterGlobe Aviation) USD/INR hedging analysis
+# Pricing date 22 Oct 2026 (latest Bank of England USD/INR reference rate in data/).
+# Amounts: USD in $ million, INR in ₹ crore unless stated. 1 crore = 10 million.
+
+pricing_date: 2026-10-22
+
+market:
+  spot: 94.8378            # BoE USD/INR reference rate, 22 Oct 2026
+  inr_rate: 0.0649         # 364-day T-bill cut-off yield, auction of 14 Oct 2026 (Business Today)
+  usd_rate: 0.03875        # Fed funds target 3.75-4.00% after the 16 Sep 2026 hike; midpoint used as 1-year USD rate (assumption)
+  vol: 0.060               # USD/INR implied vol assumption. Realised vol in 2026: 5.5% (YTD), 4.0% (last 60 days). Adds a buffer for event risk.
+  ferr_reserve: 0.20       # RBI Foreign Exchange Risk Reserve: 20% of INR notional held in cash with RBI (10 Oct 2026)
+  ferr_passthrough: 0.50   # share of the dealer's reserve funding cost passed to the user (assumption: 0 = none, 1 = all)
+
+company:
+  # Run-rates from H1 FY27 results (Q1 + Q2, annualised)
+  revenue_inr: 95896       # ₹ crore a year: (24,584.1 + 23,363.8) x 2
+  fuel_inr: 41600          # ₹ crore a year: (10,832.9 + 9,966.8) x 2
+  fuel_usd_linked: 0.90    # share of fuel cost that moves with USD/INR (ATF is priced at import parity; taxes are mostly ad valorem) - assumption
+  lease_maint_usd: 2000    # $ mn a year: aircraft lease rentals, supplementary rentals and maintenance paid in USD - estimate
+  other_usd: 600           # $ mn a year: overseas airport, navigation, handling, parts - estimate
+  international_share: 0.30  # international share of capacity (management, Aug 2026: ~30%, target 40% by FY30)
+  fx_collected_share: 0.50   # share of international revenue collected in foreign currency - assumption
+  # Balance-sheet (translation) exposure
+  net_usd_liabilities: 10000 # $ mn: "nearly $10 billion" net USD exposure (management, May 2026); ~$9 bn in Nov 2025
+  hedge_book_usd: 1300       # $ mn hedged as of May 2026 (about 13% of exposure); being scaled toward $3 bn
+  lease_liabilities_inr: 53756  # ₹ crore, capitalised operating lease liabilities, 30 Jun 2026
+  free_cash_inr: 39929       # ₹ crore free cash, 30 Sep 2026
+  tax_rate: 0.2517           # Indian corporate tax rate incl. surcharge and cess (new regime)
+
+horizon_months: 12         # hedge the next 12 months of net USD payments, settled monthly
+
+strategies:
+  collar_call_moneyness: 1.02   # collar call strike = 1.02 x forward; put strike solved for zero net premium
+  seagull_upper: 1.05           # seagull: buy call at forward, sell call at 1.05 x forward, sell put solved for zero cost
+  layered:                      # recommended policy: hedge ratio by quarter of maturity
+    ratios: [0.75, 0.60, 0.45, 0.30]
+    forward_share: 0.667        # two-thirds of each hedged slice in forwards, one-third in collars
+
+simulation:
+  paths: 10000
+  seed: 7
+  scenarios:                    # annual drift / vol of USD/INR for the Monte Carlo
+    base:   {drift: forward, vol: 0.060, label: "Market-implied (drift = forward premium)"}
+    stress: {drift: 0.080, vol: 0.090, label: "Rupee stress (8% depreciation trend, 9% vol)"}
+    relief: {drift: -0.040, vol: 0.060, label: "Rupee recovery (4% appreciation trend)"}
+
+backtest:
+  start: 2026-01-02             # hedge placed on the first fixing of 2026
+  forward_premium: 0.0265       # 1-year USD/INR forward premium in early Dec 2025 (Business Standard data point), annualised
+  vol: 0.045                    # implied vol assumption at the time
+  months: 10                    # Jan-Oct 2026 maturities have settled
+
+scenario_levels: [90.0, 92.5, 95.0, 97.5, 100.0, 105.0]   # flat USD/INR at every settlement, for the deterministic table
