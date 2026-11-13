@@ -173,4 +173,4 @@ The Excel workbook is formula-driven: change the spot, volatility, exposure or h
 
 ## Note
 
-I built this with help from an AI coding assistant. The choice of company, the assumptions and the analysis are my own.
+The choice of company, the assumptions and the analysis are my own.
