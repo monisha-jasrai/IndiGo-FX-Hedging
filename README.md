@@ -1,6 +1,6 @@
 # IndiGo USD/INR hedging analysis
 
-[![tests](https://github.com/monisha-jasrai/IndiGo-FX-Hedging/actions/workflows/ci.yml/badge.svg)](https://github.com/monisha-jasrai/IndiGo-FX-Hedging/actions/workflows/ci.yml)
+[![tests](https://github.com/monisha-jasrai/IndiGo-FX-Hedging/actions/workflows/ci.yml/badge.svg?branch=main)](https://github.com/monisha-jasrai/IndiGo-FX-Hedging/actions/workflows/ci.yml)
 
 How should IndiGo (InterGlobe Aviation, NSE: INDIGO), India's largest airline, hedge the rupee? This project maps its dollar exposure, prices the hedges a bank FX desk would offer (forwards, options, collars, seagulls), tests them on 10,000 simulated rupee paths and on what actually happened in 2026, and recommends a hedging policy.
 
